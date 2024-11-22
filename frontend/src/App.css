@@ -1,0 +1,322 @@
+/* App.css */
+
+/* Global body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide scrollbars */
+}
+
+/* Background elements */
+.background {
+  position: fixed; /* Ensures it covers the entire viewport and stays fixed */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  z-index: -1; /* Push to background */
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+.sun {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #FFD700, #FFA500);
+  border-radius: 50%;
+  box-shadow: 0px 0px 80px rgba(255, 165, 0, 0.6);
+}
+
+.cloud {
+  position: absolute;
+  background: #FFF;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cloud1 {
+  top: 20%;
+  left: 20%;
+  width: 180px;
+  height: 120px;
+}
+
+.cloud1:before {
+  content: ''; /* Fix for pseudo-element rendering */
+  position: absolute;
+  top: -20px;
+  left: 40px;
+  width: 100px;
+  height: 100px;
+  background: #FFF;
+  border-radius: 50%;
+}
+
+.cloud1:after {
+  content: ''; /* Fix for pseudo-element rendering */
+  position: absolute;
+  top: 40px;
+  left: -50px;
+  width: 120px;
+  height: 120px;
+  background: #FFF;
+  border-radius: 50%;
+}
+
+.cloud2 {
+  top: 40%;
+  left: 50%;
+  width: 150px;
+  height: 90px;
+}
+
+.cloud2:before {
+  content: ''; /* Fix for pseudo-element rendering */
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  width: 90px;
+  height: 90px;
+  background: #FFF;
+  border-radius: 50%;
+}
+
+.cloud2:after {
+  content: ''; /* Fix for pseudo-element rendering */
+  position: absolute;
+  top: 20px;
+  left: -40px;
+  width: 110px;
+  height: 110px;
+  background: #FFF;
+  border-radius: 50%;
+}
+
+.cloud3 {
+  top: 60%;
+  left: 30%;
+  width: 120px;
+  height: 80px;
+}
+
+.cloud3:before {
+  content: ''; /* Fix for pseudo-element rendering */
+  position: absolute;
+  top: -20px;
+  left: 50px;
+  width: 80px;
+  height: 80px;
+  background: #FFF;
+  border-radius: 50%;
+}
+
+.cloud3:after {
+  content: ''; /* Fix for pseudo-element rendering */
+  position: absolute;
+  top: 20px;
+  left: -60px;
+  width: 100px;
+  height: 100px;
+  background: #FFF;
+  border-radius: 50%;
+}
+.cloud4 {
+  top: 25%;
+  left: 75%;
+  width: 160px;
+  height: 100px;
+  background: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cloud4:before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 40px;
+  width: 120px;
+  height: 120px;
+  background: #FFF;
+  border-radius: 50%;
+}
+
+.cloud4:after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background: #FFF;
+  border-radius: 50%;
+}
+
+.cloud5 {
+  top: 50%;
+  left: 85%;
+  width: 140px;
+  height: 90px;
+  background: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cloud5:before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: 30px;
+  width: 100px;
+  height: 100px;
+  background: #FFF;
+  border-radius: 50%;
+}
+
+.cloud5:after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: -40px;
+  width: 90px;
+  height: 90px;
+  background: #FFF;
+  border-radius: 50%;
+}
+
+.cloud6 {
+  top: 75%;
+  left: 65%;
+  width: 120px;
+  height: 80px;
+  background: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cloud6:before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 50px;
+  width: 80px;
+  height: 80px;
+  background: #FFF;
+  border-radius: 50%;
+}
+
+.cloud6:after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background: #FFF;
+  border-radius: 50%;
+}
+.cloud7 {
+  top: 10%; /* Positioned near the top */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to align center */
+  width: 180px;
+  height: 100px;
+  background: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cloud7:before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: 30px;
+  width: 120px;
+  height: 120px;
+  background: #FFF;
+  border-radius: 50%;
+}
+
+.cloud7:after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background: #FFF;
+  border-radius: 50%;
+}
+
+/* Weather App Container */
+.weather-app {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  margin: auto;
+}
+
+
+.weather-app h1 {
+  font-size: 2.5rem;
+  color: #317873;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 12px 15px;
+  flex: 1;
+  border: 1px solid #317873;
+  border-right: none;
+  border-radius: 15px 0 0 15px;
+  outline: none;
+  font-size: 1rem;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #FFA500;
+  color: #FFF;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #FF6347;
+}
+
+.weather-info {
+  text-align: left;
+  color: #317873;
+}
+
+.weather-info h2 {
+  font-size: 1.8rem;
+}
+
+.weather-info p {
+  font-size: 1.2rem;
+}

@@ -1,30 +1,51 @@
-from flask import Flask, jsonify, request
+# backend/app.py
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)  # Enable CORS for all routes
 
-# Replace with your actual API key
-API_KEY = "17245e4b9f8397d4509abbccd8e82a59"
+# Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
+WEATHER_API_KEY = os.getenv('WEATHER_API_KEY')
 
 @app.route('/weather', methods=['GET'])
 def get_weather():
     city = request.args.get('city')
     if not city:
-        return jsonify({"error": "City not provided"}), 400
+        return jsonify({'message': 'City parameter is required.'}), 400
 
-    # Call the OpenWeatherMap API (example)
-    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={API_KEY}"
-    response = requests.get(url)
+    try:
+        # Make a request to the OpenWeatherMap API
+        weather_url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={WEATHER_API_KEY}&units=metric'
+        response = requests.get(weather_url)
+        data = response.json()
 
-    if response.status_code == 404:
-        return jsonify({"error": "City not found"}), 404
+        if data.get('cod') != 200:
+            return jsonify({'message': data.get('message', 'Error fetching weather data.')}), data.get('cod', 500)
 
-    if response.status_code != 200:
-        return jsonify({"error": "Unable to fetch weather data"}), response.status_code
+        # Extract relevant data
+        weather_data = {
+            'name': data['name'],
+            'main': {
+                'temp': data['main']['temp'],
+                'humidity': data['main']['humidity'],
+                'pressure': data['main']['pressure']
+            },
+            'weather': data['weather'],
+            'wind': data['wind'],
+            'sys': data['sys']
+        }
 
-    return jsonify(response.json())
+        return jsonify(weather_data), 200
+
+    except Exception as e:
+        return jsonify({'message': 'An error occurred while fetching weather data.'}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -2,6 +2,12 @@
 
 A React-based web application integrated with a Flask backend to fetch and display real-time weather data for any city. The application provides a user-friendly interface for viewing weather information, including temperature, weather description, and more.
 
+
+
+https://github.com/user-attachments/assets/1b9c7015-b3d9-4082-afe7-7f1d8f7a667d
+
+
+
 ## Features
 - **Real-Time Weather Data:** Fetches live weather information from an API based on the user's input.
 

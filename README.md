@@ -43,7 +43,8 @@ https://github.com/user-attachments/assets/1b9c7015-b3d9-4082-afe7-7f1d8f7a667d
    git clone https://github.com/yourusername/weather-app.git
    cd weather-app
    ```
-3. Set Up the Backend
+## Deploy and Configure Web
+1. Set Up the Backend
     1. Navigate to the backend/ directory:
          ```
          cd backend
@@ -65,7 +66,7 @@ https://github.com/user-attachments/assets/1b9c7015-b3d9-4082-afe7-7f1d8f7a667d
           ```
           python app.py
           ```
-4. Set Up the Frontend
+2. Set Up the Frontend
     1. Navigate to the frontend/ directory:
          ```
          cd ../frontend
@@ -82,6 +83,8 @@ https://github.com/user-attachments/assets/1b9c7015-b3d9-4082-afe7-7f1d8f7a667d
           ```
           npm start
           ```
+3. curl http://localhost
+   
 ## Usage
 1. Open your browser and navigate to http://localhost:3000.
 2. Enter the name of a city in the input field and click the "Get Weather" button.

@@ -127,7 +127,3 @@ weather-app/
 - Dark Mode: Add a toggle for dark/light themes.
 - Multilingual Support: Allow users to view weather data in different languages.
 
-## Contact
-- Author: Satish Bezawada
-- Email: bsatishaws@gmail.com
-- GitHub: https://github.com/zippyzap2

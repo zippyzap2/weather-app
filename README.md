@@ -43,7 +43,7 @@ https://github.com/user-attachments/assets/1b9c7015-b3d9-4082-afe7-7f1d8f7a667d
    git clone https://github.com/yourusername/weather-app.git
    cd weather-app
    ```
-## Deploy and Configure Web
+## Run Local
 1. Set Up the Backend
     1. Navigate to the backend/ directory:
          ```
